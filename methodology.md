@@ -1,8 +1,7 @@
-# The Brain Health Priority Gap Project — Methodology
+# Brain Health as an Economic Input — Methodology
 
-*Women's brain health as an input to the economy: a companion
-proof-of-concept to the Hidden Skills Radar (POC 1), applying the same
-recognition-gap method to a different policy domain.*
+*A companion proof-of-concept to the Hidden Skills Radar (POC 1),
+applying the same recognition-gap method to a different policy domain.*
 
 This is the canonical methodology document for POC 2. It mirrors POC 1's
 three-layer architecture and pipeline structure, so that both projects

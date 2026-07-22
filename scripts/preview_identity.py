@@ -57,7 +57,7 @@ html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Brain Health Priority Gap Project &mdash; Identity proposal</title>
+<title>Brain Health as an Economic Input &mdash; Identity proposal</title>
 <style>{CSS}</style>
 </head>
 <body>
