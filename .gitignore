@@ -1,0 +1,15 @@
+# OS artifacts
+.DS_Store
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# LibreOffice lock files
+.~lock.*
+
+# Local render-check artifacts (not tracked deliverables)
+briefing/note_check_*.jpg
+briefing/identity_preview*.jpg
+briefing/check_*.pdf
+*.tmp
