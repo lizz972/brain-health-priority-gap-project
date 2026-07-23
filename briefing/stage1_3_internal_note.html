@@ -45,7 +45,7 @@ body{font-family:Arial,Helvetica,"Segoe UI",sans-serif;color:var(--text);
 .topband .subtitle{font-size:13.5px;font-style:italic;color:#DCEAE7;
   border-top:1px solid rgba(255,255,255,.35);padding-top:7px;max-width:88%;}
 
-.body-pad{padding:6mm 14mm 11mm 14mm;}
+.body-pad{padding:6mm 14mm 6mm 14mm;}
 
 .byline{font-size:11px;color:var(--grey);margin:0 0 10px 0;}
 .byline strong{color:var(--deep);}
@@ -75,7 +75,7 @@ h3.sub{color:var(--sage);font-size:14px;margin:8px 0 4px 0;font-weight:700;}
 .pullquote .q{font-size:15px;font-weight:700;color:var(--deep);line-height:1.4;}
 
 .railbox{background:var(--lightgrey);border-top:3px solid var(--sage);
-  padding:9px 11px;margin:0 0 11px 0;font-size:12px;break-inside:avoid;}
+  padding:7px 11px;margin:0 0 6px 0;font-size:12px;break-inside:avoid;}
 .railbox .boxtitle{color:var(--deep);font-weight:800;font-size:11px;
   text-transform:uppercase;letter-spacing:.3px;margin-bottom:5px;}
 .railbox ul{margin:4px 0 0 0;padding-left:15px;}
@@ -110,7 +110,7 @@ sup{color:var(--sage);font-weight:700;}
   text-transform:uppercase;letter-spacing:.3px;font-weight:700;}
 
 .citebox{border-top:2px solid var(--deep);border-bottom:2px solid var(--deep);
-  padding:7px 0;margin-top:6px;font-size:12px;}
+  padding:5px 0;margin-top:3px;font-size:12px;}
 .citebox p{margin:0 0 4px 0;}
 .citebox .rule{border-top:1px solid var(--rule);margin:6px 0;}
 .contactbrand{display:flex;align-items:center;gap:9px;margin-bottom:6px;}
@@ -300,6 +300,11 @@ sup{color:var(--sage);font-weight:700;}
 <tr><td>Brain fog</td><td>53.1</td><td>31.8</td><td>1,689</td></tr>
 </table>
 
+    <h2 class="sec">Reading the ranking correctly</h2>
+    <p>Sleep and cognition has the highest Trends growth (217.9%) but ranks near the bottom on emergence because its OpenAlex growth is flat (7.8%): the multiplicative formula rewards convergence across both signals over strength on either one alone. The same logic explains why postpartum cognitive changes, the highest Trends growth of all eight at 133.3%, still ranks fifth.</p>
+    <h2 class="sec">What's still missing</h2>
+    <p>The medical-recognition check has not been run yet. This page compares public search interest against academic publishing only, not yet against MeSH, the US National Library of Medicine's controlled vocabulary, which would show whether a topic already has formal recognition. Adding that comparison would produce a single priority score per topic; without it, these numbers describe attention and publishing activity only.</p>
+
 </div>
 <div class="pagefoot"><span>POC draft research proposal</span><span>Page 5 of 6</span></div>
 </div>
@@ -320,23 +325,11 @@ sup{color:var(--sage);font-weight:700;}
 <div class="body-pad">
 <div class="pagehead"><span>Brain Health as an Economic Input</span><span>Evidence and next step</span></div>
 
-
-<div class="layout">
-  <div class="main">
-    <h2 class="sec">Reading the ranking correctly</h2>
-    <p>Sleep and cognition has the highest Trends growth (217.9%) but ranks near the bottom on emergence because its OpenAlex growth is flat (7.8%): the multiplicative formula rewards convergence across both signals over strength on either one alone. The same logic explains why postpartum cognitive changes, the highest Trends growth of all eight at 133.3%, still ranks fifth.</p>
-    <h2 class="sec">What's still missing</h2>
-    <p>The medical-recognition check has not been run yet. This page compares public search interest against academic publishing only, not yet against MeSH, the US National Library of Medicine's controlled vocabulary, which would show whether a topic already has formal recognition. Adding that comparison would produce a single priority score per topic; without it, these numbers describe attention and publishing activity only.</p>
-  </div>
-  <div class="rail">
-    <div class="railbox">
+<div class="railbox" style="margin-top:6px;">
       <div class="boxtitle">Future Steps</div>
       <p style="margin:0;">The initial analysis has identified the most promising topics. As a next step, it may be valuable to conduct additional research into MeSH (Medical Subject Headings) integration and explore opportunities to further enrich the prototype. This could include evaluating how MeSH terminology mapping may improve topic classification, strengthen consistency across analyses, and support future scalability.
 
 In parallel, expanding the prototype's functionality could help assess its robustness and potential value beyond the current scope. Further investigation in these areas would provide greater confidence in the approach and help identify opportunities for enhancement before proceeding to a a broader research exercise.</p>
-  </div>
-</div>
-
 </div>
 
 <h2 class="sec">References</h2>
