@@ -1,12 +1,15 @@
 # Brain Health as an Economic Input — Methodology
 
-*A companion proof-of-concept to the Hidden Skills Radar (POC 1),
-applying the same recognition-gap method to a different policy domain.*
+*A pre-registered proof-of-concept testing whether public search interest
+and academic publishing activity amplify the case that women's brain
+health is economically material, ahead of and independent of a formal
+biomedical-recognition check.*
 
-This is the canonical methodology document for POC 2. It mirrors POC 1's
-three-layer architecture and pipeline structure, so that both projects
-demonstrate the same underlying method — anticipatory policy intelligence
-from open digital signals — applied to two independent policy domains.
+This is the canonical methodology document for this project. It sets out
+a three-layer architecture — a public attention signal, a research
+production signal, and a formal institutional recognition layer — used to
+detect where emerging public and research interest in a topic runs ahead
+of that topic's formal biomedical recognition.
 
 This document is a pre-registration: it fixes the method, the data
 sources, the two growth-window definitions, and the expected-result
@@ -36,16 +39,16 @@ Brain Capital programme already treats brain health as economically
 material, so this is not a case of manufacturing policy relevance from
 nothing); a plausible recognition lag (the candidate conditions —
 perimenopausal cognitive symptoms, adult-diagnosed ADHD, long-COVID
-cognitive effects, postpartum cognitive change — are the kind of
-combination-of-partially-recognised-elements case where POC 1 also found
-its clearest signal, not isolated novel terms); and free, no-registration
-data access for a first pass (Google Trends and OpenAlex), so the decision
-to proceed past Stage 3 could be made on a week's effort rather than a
-procurement cycle. A topic failing any of the three would not have cleared
-this bar: no institutional anchor makes the "why does this matter" case
-harder to write; no plausible lag makes a null result uninformative; paid
-or gated data makes the first pass itself a commitment rather than a cheap
-test.
+cognitive effects, postpartum cognitive change — are combinations of
+already-partially-recognised elements rather than isolated novel terms,
+which is where a recognition gap is most plausible); and free,
+no-registration data access for a first pass (Google Trends and OpenAlex),
+so the decision to proceed past Stage 3 could be made on a week's effort
+rather than a procurement cycle. A topic failing any of the three would
+not have cleared this bar: no institutional anchor makes the "why does
+this matter" case harder to write; no plausible lag makes a null result
+uninformative; paid or gated data makes the first pass itself a commitment
+rather than a cheap test.
 
 **Effort and cost read.** Stages 1–3 (Google Trends and OpenAlex
 collection, emergence scoring) require no paid API access and no
@@ -64,8 +67,8 @@ Stages 1–3 only, with a named stop condition (proceed to MeSH matching and
 a full briefing note only if the emergence layer shows a meaningful
 signal; otherwise report the negative result as a defensible finding on
 its own). That gate is what makes this a scoping exercise rather than a
-second finished report — the commitment size is explicitly matched to how
-much has been validated so far.
+finished report — the commitment size is explicitly matched to how much
+has been validated so far.
 
 **Use case.** This document is written for a reader deciding whether to
 fund the next stage of a candidate analytics project, not for a reader
@@ -100,50 +103,47 @@ That framing question motivates the analysis but is not, on its own, what
 this pipeline measures. What the pipeline directly tests is the narrower
 and immediately computable version of it: for each of eight candidate
 topics spanning the female lifespan, is there a coverage gap between
-emerging public/research signal and formal biomedical recognition
-(MeSH) — the same structure POC 1 applied to ESCO and AI skills? Whether
-discourse is becoming more integrated across these topics — the sharper
-lifespan-silo question above — is related but distinct, and this pipeline
-does not yet measure it directly. It is flagged as the natural next stage
-in Section 7, once the per-topic layer is validated.
+emerging public/research signal and formal biomedical recognition (MeSH)?
+Whether discourse is becoming more integrated across these topics — the
+sharper lifespan-silo question above — is related but distinct, and this
+pipeline does not yet measure it directly. It is flagged as the natural
+next stage in Section 7, once the per-topic layer is validated.
 
 The economic framing here ("brain capital," labour-force participation) is
 the "why it matters" case that connects this analysis to existing OECD
-priorities, mirroring how POC 1 connected AI skills detection to
-labour-market policy. It sits alongside, not in place of, the intrinsic
-case for closing gender gaps in brain-health recognition — the economic
-argument is a complement to that case, not a replacement for it.
+priorities. It sits alongside, not in place of, the intrinsic case for
+closing gender gaps in brain-health recognition — the economic argument is
+a complement to that case, not a replacement for it.
 
 Conditions such as perimenopausal cognitive symptoms, adult-diagnosed
 ADHD, long-COVID cognitive effects and postpartum cognitive change
 plausibly affect female labour-force participation and productivity, yet
-are inconsistently represented in formal biomedical classification systems
-— creating a recognition question directly analogous to the
-skills-recognition question in POC 1.
+are inconsistently represented in formal biomedical classification
+systems — creating a recognition question that a repeatable measurement
+framework can test directly.
 
 ## 2. Three-layer architecture and why each source was chosen
 
 | Layer | Source | Role | Why this source (vs. alternatives considered) |
 |---|---|---|---|
-| Public information-seeking ecosystem | Google Trends (via `pytrends`) | What the public is beginning to search for | No API key required; free; widely cited in public-health surveillance research. Considered Reddit instead (richer lived-experience language), but Reddit requires a registered API app; Google Trends can be collected immediately and still captures rising public attention, which is the same function YouTube played in POC 1. |
-| Research production ecosystem | OpenAlex Works API | What researchers are actively publishing — volume, growth rate, co-occurring concepts | Free, no key required, comprehensive open scholarly index; plays the same role GitHub played in POC 1 (a production/output signal, not just discussion). |
-| Institutional recognition layer | MeSH (Medical Subject Headings, US National Library of Medicine) | Whether an emerging topic already maps onto a formally recognised biomedical concept | Free, no-authentication REST API returning structured descriptor records — the closest available analog to how ESCO was used in POC 1 (a queryable, publicly governed concept taxonomy, not a dictionary look-up). WHO/ICD-11 was considered and is more immediately recognisable to policymakers, but its API requires registering a client id/secret before any data can be pulled; MeSH lets the pipeline run today. WHO/ICD-11 is kept as a named next-development-stage comparison layer (see Section 7), exactly how POC 1 kept O*NET/OpenAlex as future work rather than pretending it was already implemented. |
+| Public information-seeking ecosystem | Google Trends (via `pytrends`) | What the public is beginning to search for | No API key required; free; widely cited in public-health surveillance research. Considered Reddit instead (richer lived-experience language), but Reddit requires a registered API app; Google Trends can be collected immediately and still captures rising public attention. |
+| Research production ecosystem | OpenAlex Works API | What researchers are actively publishing — volume, growth rate, co-occurring concepts | Free, no key required, comprehensive open scholarly index; a production/output signal, not just discussion. |
+| Institutional recognition layer | MeSH (Medical Subject Headings, US National Library of Medicine) | Whether an emerging topic already maps onto a formally recognised biomedical concept | Free, no-authentication REST API returning structured descriptor records — a queryable, publicly governed concept taxonomy, not a dictionary look-up. WHO/ICD-11 was considered and is more immediately recognisable to policymakers, but its API requires registering a client id/secret before any data can be pulled; MeSH lets the pipeline run today. WHO/ICD-11 is kept as a named next-development-stage comparison layer (see Section 7). |
 
 The three layers feed a single indicator, the **Brain Health Priority Gap
-Index** — the direct analog of POC 1's Capability Recognition Gap Index.
+Index**.
 
 ## 3. Candidate topics, not just single search terms
 
-Following the same logic as POC 1's "capability configurations" concept,
-several candidates are not single symptoms but combinations of
+Several candidates are not single symptoms but combinations of
 already-partially-recognised elements (e.g. "ADHD in women" combines a
 recognised diagnostic category with an under-studied population; "long
 COVID cognitive effects" combines a novel condition with an established
 cognitive-science vocabulary). Eight candidate topics were selected to
 span distinct life stages — the same life stages the newsletter trigger
-for this POC described as commonly discussed in isolation from one
-another — where lived-experience language plausibly precedes formal
-clinical terminology (full list and keyword patterns in
+for this proof-of-concept described as commonly discussed in isolation
+from one another — where lived-experience language plausibly precedes
+formal clinical terminology (full list and keyword patterns in
 `data/taxonomy/candidate_topics.csv`):
 
 1. Brain fog
@@ -157,9 +157,9 @@ clinical terminology (full list and keyword patterns in
 
 ## 4. Analytical pipeline — file by file
 
-The pipeline mirrors POC 1's five conceptual stages and verified script
-order. **Scripts and their inputs/outputs are described below as they will
-work once run — none have been executed yet.**
+The pipeline runs in five conceptual stages, each with a verified script
+order. **Scripts and their inputs/outputs are described below as they
+will work once run — none have been executed yet.**
 
 ### Stage 1 — Collect public digital traces
 
@@ -173,48 +173,48 @@ work once run — none have been executed yet.**
 
 | Script | What it does | Why |
 |---|---|---|
-| `build_text_corpus.py` | Combines OpenAlex titles/abstracts into one text corpus | Mirrors `build_text_corpus.py` in POC 1; feeds diagnostic term extraction |
+| `build_text_corpus.py` | Combines OpenAlex titles/abstracts into one text corpus | Feeds diagnostic term extraction |
 | `extract_terms.py` | Diagnostic term-frequency scan over the corpus (not read downstream) | Sanity check on vocabulary before scoring |
-| `build_signal_dataset.py` | Builds a unified per-item signal table from Trends + OpenAlex data | Direct analog of POC 1's `build_signal_dataset.py` |
+| `build_signal_dataset.py` | Builds a unified per-item signal table from Trends + OpenAlex data | Single source of truth for the emergence-scoring stage |
 
 ### Stage 3 — Score emergence
 
 | Script | What it does | Why |
 |---|---|---|
-| `calculate_topic_signals.py` | Combines Google Trends growth (recent 3-month mean vs. prior 12-month mean) and OpenAlex publication growth (trailing 3-year works count vs. prior 3-year works count) into an emergence score per topic | Direct analog of `calculate_skill_signals.py`; same mentions x ecosystems logic, with both growth windows explicitly defined ahead of data collection |
-| `extract_openalex_evidence.py` | Extracts per-work fields (venue, citation count, concepts, date) | Analog of `extract_github_evidence.py` |
-| `build_topic_ecosystem_map.py` | Aggregates OpenAlex evidence per candidate topic | Analog of `build_skill_ecosystem_map.py` |
+| `calculate_topic_signals.py` | Combines Google Trends growth (recent 3-month mean vs. prior 12-month mean) and OpenAlex publication growth (trailing 3-year works count vs. prior 3-year works count) into an emergence score per topic | Requires convergent, genuinely rising signal across both ecosystems, with both growth windows explicitly defined ahead of data collection |
+| `extract_openalex_evidence.py` | Extracts per-work fields (venue, citation count, concepts, date) | Supporting evidence for the emergence score |
+| `build_topic_ecosystem_map.py` | Aggregates OpenAlex evidence per candidate topic | Feeds the final evidence table |
 
 ### Stage 4 — Compare against MeSH and compute the recognition gap
 
 | Script | What it does | Why |
 |---|---|---|
-| `process_mesh.py` | Cleans raw MeSH JSON into a flat descriptor table | Analog of `process_esco.py` |
-| `extract_topic_mentions.py` | Diagnostic MeSH-term mention count (not read downstream) | Sanity check, mirrors `extract_skill_mentions.py` |
-| `mesh_alignment.py` | Matches each candidate to the closest MeSH descriptor by text similarity; **the zero-similarity tie-break fix from POC 1 is built in from the start** (a zero score is reported as no match, not an arbitrary nearest label) | Direct analog of `esco_alignment.py` — this is the step that produced a real, hard-to-spot bug in POC 1, so it is being written correctly the first time here |
-| `create_final_evidence_table.py` | Merges emergence + MeSH + OpenAlex evidence into one table | Analog of `create_final_evidence_table.py` |
-| `build_mesh_recognition_layer.py` | Classifies each candidate's MeSH recognition status (initial labels) | Analog of `build_esco_recognition_layer.py` |
-| `update_mesh_labels.py` | Relabels recognition categories to final naming | Analog of `update_esco_labels.py` |
-| `update_mesh_interpretations.py` | Attaches final interpretation text per category | Analog of `update_esco_interpretations.py` |
+| `process_mesh.py` | Cleans raw MeSH JSON into a flat descriptor table | Standardises MeSH records for text-similarity matching |
+| `extract_topic_mentions.py` | Diagnostic MeSH-term mention count (not read downstream) | Sanity check on vocabulary coverage |
+| `mesh_alignment.py` | Matches each candidate to the closest MeSH descriptor by text similarity; **a zero-similarity result is reported as no match, not an arbitrary nearest label, fixed before this stage is run** | Prevents a known text-similarity failure mode — assigning a spuriously "closest" label to a genuinely unmatched candidate — from ever entering the results |
+| `create_final_evidence_table.py` | Merges emergence + MeSH + OpenAlex evidence into one table | Single evidence table for the index calculation |
+| `build_mesh_recognition_layer.py` | Classifies each candidate's MeSH recognition status (initial labels) | Feeds the recognition-category labelling |
+| `update_mesh_labels.py` | Relabels recognition categories to final naming | Cleans category labels for the briefing note |
+| `update_mesh_interpretations.py` | Attaches final interpretation text per category | Feeds the evidence table's interpretation column |
 
 ### Stage 5 — Combine into the index and publish
 
 | Script | What it does | Why |
 |---|---|---|
-| `build_priority_index.py` | Computes the Brain Health Priority Gap Index | Analog of `build_hidden_skill_index.py` |
-| `build_final_topic_radar.py` | Assembles the full combined radar table | Analog of `build_final_skill_radar.py` |
-| `create_policy_radar.py` | Policy-facing subset of the MeSH recognition table | Analog of `create_policy_radar.py` |
-| `create_policy_table.py` | Policy-facing subset of the topic radar | Analog of `create_policy_table.py` |
-| `create_policy_summary.py` | Summary statistics for a policy audience | Analog of `create_policy_summary.py` |
-| `create_priority_matrix.py` | Optional standalone chart, not used in the briefing note | Analog of `create_hidden_skill_matrix.py` |
-| `generate_report_figures.py` | Generates the 5 figures for the briefing note | Analog of POC 1's figure generator |
-| `build_report_docx.js` / `build_report_html.py` | Build the Word and HTML/PDF versions of the final briefing note | Same toolchain as POC 1 |
+| `build_priority_index.py` | Computes the Brain Health Priority Gap Index | Core indicator calculation |
+| `build_final_topic_radar.py` | Assembles the full combined radar table | Single table feeding all downstream figures |
+| `create_policy_radar.py` | Policy-facing subset of the MeSH recognition table | Simplifies the recognition table for a policy audience |
+| `create_policy_table.py` | Policy-facing subset of the topic radar | Simplifies the topic radar for a policy audience |
+| `create_policy_summary.py` | Summary statistics for a policy audience | Top-line numbers for the briefing note |
+| `create_priority_matrix.py` | Optional standalone chart, not used in the briefing note | Supplementary visualisation only |
+| `generate_report_figures.py` | Generates the 5 figures for the briefing note | Chart generation for the final report |
+| `build_report_docx.js` / `build_report_html.py` | Build the Word and HTML/PDF versions of the final briefing note | Final-output rendering |
 
 ### Kept as future work only (not run, not claimed as implemented)
 
 | Script | What it would do | Why it's not core |
 |---|---|---|
-| `comparison/build_who_comparison.py` | Optional WHO/ICD-11 comparison layer, requiring a registered API client | Exactly how POC 1 kept O*NET/OpenAlex as an optional, clearly-labelled future-work comparison rather than presenting it as validated core methodology |
+| `comparison/build_who_comparison.py` | Optional WHO/ICD-11 comparison layer, requiring a registered API client | Clearly-labelled future-work comparison, not presented as validated core methodology |
 
 ## 5. Indicators (planned)
 
@@ -245,8 +245,7 @@ neither is presupposed by the formula.
 ## 6. Anticipated limitations (to validate once data is collected)
 
 - **Construct validity** — search growth and publication growth may
-  reflect attention rather than genuine emerging need, exactly as in
-  POC 1.
+  reflect attention rather than genuine emerging need.
 - **Snapshot bias** — a single collection date, not a trend line, unless
   repeated.
 - **Platform dependence** — Google Trends and OpenAlex both skew toward
@@ -255,16 +254,15 @@ neither is presupposed by the formula.
   under-recognised brain health conditions.
 - **MeSH coverage, reframed as an expected result rather than a threat to
   the finding** — MeSH is a broad, mature vocabulary, so most individual
-  candidate topics likely already have a reasonably close descriptor,
-  unlike POC 1's finding of near-total ESCO non-alignment for AI
-  capabilities. That is the anticipated outcome here, not a null result:
-  the interesting gap in this domain is not expected at the level of
-  individual, already-medicalised symptoms, but at the level of lifespan
-  integration — whether any single institutional or public framing
-  connects these topics as one continuous trajectory, the way NAEC's own
-  Brain Capital initiative already argues for (Section 1). This pipeline,
-  as scoped, measures the former (per-topic recognition); it does not yet
-  measure the latter (cross-topic integration) — see Section 7.
+  candidate topics likely already have a reasonably close descriptor. That
+  is the anticipated outcome here, not a null result: the interesting gap
+  in this domain is not expected at the level of individual,
+  already-medicalised symptoms, but at the level of lifespan integration —
+  whether any single institutional or public framing connects these
+  topics as one continuous trajectory, the way NAEC's own Brain Capital
+  initiative already argues for (Section 1). This pipeline, as scoped,
+  measures the former (per-topic recognition); it does not yet measure the
+  latter (cross-topic integration) — see Section 7.
 
 ## 7. Next development stages
 
@@ -300,11 +298,11 @@ only if the emergence results justify the additional step.
 
 **Decision point after that:** if the emergence layer surfaces a
 meaningful signal, proceed to MeSH matching and the full Priority Gap
-Index (Stages 4–5), and publish as a short briefing note comparable in
-scope to POC 1. If not, the negative result is itself useful — it would
-suggest women's brain health topics are not currently under-tracked in
-public/research discourse relative to formal recognition, which is a
-defensible, reportable finding on its own rather than a failed pilot.
+Index (Stages 4–5), and publish as a short briefing note. If not, the
+negative result is itself useful — it would suggest women's brain health
+topics are not currently under-tracked in public/research discourse
+relative to formal recognition, which is a defensible, reportable finding
+on its own rather than a failed pilot.
 
 **What this is not asking for, yet:** WHO/ICD-11 integration, longitudinal
 monitoring, or the lifespan-integration indicator (Section 7, items 1, 2

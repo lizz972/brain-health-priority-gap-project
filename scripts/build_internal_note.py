@@ -1,16 +1,15 @@
 """
 Draft research document reporting emergence-score results for Brain
-Health as an Economic Input (POC 2), per methodology.md Section 8's ask:
+Health as an Economic Input, per methodology.md Section 8's ask:
 a short document (1-2 pages) reporting the emergence score per topic,
 without yet claiming a recognition gap. The MeSH comparison step has not
 been run, so this document reports emergence only.
 
 Written for a reader with no prior context on the project (this is an
 interview writing sample): opens with the policy question and why the
-project exists, before any numbers, the same convention used throughout
-POC1. The "what's still missing" explanation is given in plain terms
-right before the decision ask, rather than as an upfront "Stage 1-3"
-label a first-time reader would not recognise.
+project exists, before any numbers. The "what's still missing" explanation
+is given in plain terms right before the decision ask, rather than as an
+upfront "Stage 1-3" label a first-time reader would not recognise.
 
 Uses the sidebar visual-identity template from report_style.py. That
 template was shared as a proposal and not yet formally signed off as a

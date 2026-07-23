@@ -1,34 +1,21 @@
 """
 Shared visual identity for the Brain Health as an Economic Input briefing
-note (POC 2). Same muted, institutional register as the Hidden Skills
-Radar (POC 1) template, but a distinct layout grammar as well as a
-distinct palette, so the two documents are never mistaken for each other
-even in black-and-white photocopy:
-
-- POC1: masthead with logo-left/doclabel-right, full-width two-column
-  justified body, inline boxes at full column width, dark solid-fill
-  policy-question banner, bottom-of-page footnotes.
-- POC2: full-width colour band header (not a slim masthead rule),
-  single main column + a narrower right-hand rail that carries the
-  policy question as a pull-quote, box call-outs and footnotes — a
-  sidebar layout rather than an inline two-column one.
+note. Muted, institutional register with a distinct layout grammar:
+full-width colour band header (not a slim masthead rule), single main
+column plus a narrower right-hand rail that carries the policy question
+as a pull-quote, box call-outs and footnotes — a sidebar layout rather
+than an inline two-column one.
 
 Palette: muted slate teal — deep teal-slate + sage accent, gender-neutral
 and clinical in register (deliberately not a "women's health" pink),
-matching POC1's institutional/Cedefop-style muted tone without reusing
-its exact hues.
-
-Naming note: this project is deliberately not called a "radar" — that
-name belongs to POC1. Use BRAND_NAME below wherever the product name
-appears in generated documents.
+in an institutional/Cedefop-style muted tone.
 
 Status note: nothing built with this style module has been adopted yet.
 Anything rendered with it should say "proposal" or "preview" somewhere
 on the page until the user signs off on it.
 
 Usage: import CSS, topband(), pagefoot() into a build_report_html.py for
-this project once Stage 4 findings are final, the same way
-scripts/build_report_html.py in POC1 assembles its pages.
+this project once Stage 4 findings are final.
 """
 
 BRAND_NAME = "BRAIN HEALTH AS AN ECONOMIC INPUT"
@@ -58,7 +45,7 @@ body{font-family:Arial,Helvetica,"Segoe UI",sans-serif;color:var(--text);
   .page{margin:0;box-shadow:none;page-break-after:always;height:297mm;}
 }
 
-/* full-width colour band header, replacing POC1's slim logo-left masthead */
+/* full-width colour band header */
 .topband{background:var(--deep);color:#fff;padding:9mm 14mm 7mm 14mm;}
 .topband .row{display:flex;justify-content:space-between;align-items:flex-start;}
 .topband .brandmark{width:30px;height:30px;background:rgba(255,255,255,.14);
@@ -94,7 +81,7 @@ h2.sec::before{content:"";position:absolute;left:0;top:1px;bottom:1px;width:4px;
 h3.sub{color:var(--sage);font-size:14px;margin:8px 0 4px 0;font-weight:700;}
 
 /* sidebar layout: main narrative column + a narrower right rail,
-   replacing POC1's full-width two-column justified flow */
+*/
 .layout{display:grid;grid-template-columns:1fr 0.4fr;gap:8mm;align-items:start;}
 .main p{margin:0 0 5px 0;text-align:left;}
 .rail{border-left:1px solid var(--rule);padding-left:8mm;}
@@ -157,7 +144,7 @@ LOGO_SVG = """<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000
 
 
 def topband(doctitle, subtitle, doclabel="Proposal"):
-    """Full-width colour-band header + title block (replaces POC1's slim masthead).
+    """Full-width colour-band header + title block.
 
     doclabel defaults to "Proposal" rather than "Briefing note": nothing
     built with this identity has been adopted yet, so every page should

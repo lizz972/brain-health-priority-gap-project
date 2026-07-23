@@ -1,6 +1,5 @@
 # Aggregates OpenAlex evidence per candidate topic (work count, total
-# citations), the production-ecosystem analog of
-# build_skill_ecosystem_map.py in POC 1.
+# citations) as the research-production signal.
 #
 # Requires: pip install pandas
 

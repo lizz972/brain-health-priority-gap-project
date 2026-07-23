@@ -5,10 +5,9 @@
 # terms are clipped at zero before multiplying: a topic that is declining
 # in one ecosystem should not register positive emergence just because it
 # is also declining in the other (a literal signed multiplication would
-# turn "both falling" into a spuriously positive product). This mirrors
-# POC 1's emergence-formula rationale of requiring convergent, genuinely
-# positive evidence across both ecosystems rather than letting one
-# ecosystem's raw number dominate or distort the score.
+# turn "both falling" into a spuriously positive product). This requires
+# convergent, genuinely positive evidence across both ecosystems rather
+# than letting one ecosystem's raw number dominate or distort the score.
 #
 # Requires: pip install pandas
 

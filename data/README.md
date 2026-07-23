@@ -13,9 +13,9 @@
 
 ## Why these sources
 
-- **Google Trends** captures what the public is actively searching for — an early, low-cost signal of emerging concern, directly analogous to YouTube in the Hidden Skills Radar's learning-ecosystem layer.
-- **OpenAlex** captures what researchers are actively producing — publication counts, growth rate and co-occurring concepts — directly analogous to GitHub's production-ecosystem role.
-- **MeSH** (Medical Subject Headings, US National Library of Medicine) is a structured, publicly governed biomedical vocabulary with a free, no-authentication REST API, making it the closest practical analog to how ESCO was used in the Hidden Skills Radar: not a dictionary look-up, but a comparison instrument for measuring how closely an emerging topic already maps onto formally recognised terminology.
+- **Google Trends** captures what the public is actively searching for — an early, low-cost signal of emerging concern.
+- **OpenAlex** captures what researchers are actively producing — publication counts, growth rate and co-occurring concepts.
+- **MeSH** (Medical Subject Headings, US National Library of Medicine) is a structured, publicly governed biomedical vocabulary with a free, no-authentication REST API: not a dictionary look-up, but a comparison instrument for measuring how closely an emerging topic already maps onto formally recognised terminology.
 
 ## Candidate topics
 

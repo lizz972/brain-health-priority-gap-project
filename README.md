@@ -1,10 +1,8 @@
 # Brain Health as an Economic Input
 
-A companion proof-of-concept to the Hidden Skills Radar (POC 1), applying
-the same recognition-gap method to a different policy domain: whether
-public and unconventional digital datasets amplify the case that women's
-brain health is economically material, ahead of and independent of a
-formal medical-recognition check.
+A proof-of-concept testing whether public and unconventional digital
+datasets amplify the case that women's brain health is economically
+material, ahead of and independent of a formal medical-recognition check.
 
 This is a sample proof-of-concept analysis that simulates how a policy
 research unit might scope and pre-register a data-driven anticipatory

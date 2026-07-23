@@ -1,5 +1,5 @@
 """
-One-page rendered preview of the POC2 visual-identity PROPOSAL
+One-page rendered preview of the visual-identity PROPOSAL
 (report_style.py), so the palette AND layout can be checked on an actual
 printed page rather than only as a chat mockup. This is a proposal, not
 an adopted identity and not a briefing note — Stage 4 (MeSH alignment)
@@ -24,17 +24,17 @@ page = f"""
 )}
 <div class="body-pad">
 {pagehead("Layout check")}
-<div class="disclaimer"><strong>This is a proposal, not an adopted identity or a briefing note.</strong> It uses a sidebar layout &mdash; a single main column plus a narrower right-hand rail &mdash; deliberately different from POC1's full-width two-column arrangement, in a distinct muted slate-teal palette, and a project name that does not reuse POC1's "radar" branding. Nothing on this page reflects a real finding.</div>
+<div class="disclaimer"><strong>This is a proposal, not an adopted identity or a briefing note.</strong> It uses a sidebar layout &mdash; a single main column plus a narrower right-hand rail &mdash; in a distinct muted slate-teal palette. Nothing on this page reflects a real finding.</div>
 
 <h2 class="sec">Placeholder section heading</h2>
 <div class="layout">
   <div class="main">
-    <p><strong>This is where the opening key-message paragraph will sit once Stage 4 is complete.</strong> Single-column body copy, left-aligned rather than justified, with a rule-and-tab section heading instead of POC1's full-width underlined heading.</p>
-    <p>Second paragraph placeholder, showing how a longer block of body copy reads in this palette at the same 10.6px base size used in POC1, but in one column instead of two.</p>
+    <p><strong>This is where the opening key-message paragraph will sit once Stage 4 is complete.</strong> Single-column body copy, left-aligned rather than justified, with a rule-and-tab section heading.</p>
+    <p>Second paragraph placeholder, showing how a longer block of body copy reads in this palette, in one column instead of two.</p>
     <p>Third paragraph placeholder with a footnote marker<sup>1</sup> to check the sage superscript colour against the rest of the running text.</p>
   </div>
   <div class="rail">
-    <div class="pullquote"><span class="label">Policy question</span><span class="q">Placeholder policy-question text, styled as a rule-bordered pull-quote rather than POC1's solid-fill banner.</span></div>
+    <div class="pullquote"><span class="label">Policy question</span><span class="q">Placeholder policy-question text, styled as a rule-bordered pull-quote.</span></div>
     <div class="stat"><div class="n">8</div><div class="l">Candidate topics</div></div>
     <div class="railbox">
       <div class="boxtitle">Box 1 &nbsp;Placeholder box title</div>
@@ -44,7 +44,7 @@ page = f"""
       </ul>
     </div>
     <div class="footnotes">
-      <p>(1) Placeholder footnote, dotted top rule instead of POC1's solid one.</p>
+      <p>(1) Placeholder footnote, dotted top rule.</p>
     </div>
   </div>
 </div>
