@@ -35,22 +35,53 @@ def b64(name):
 
 
 FIG1 = b64("emergence_score_by_topic.png")
+FIG2 = b64("wordcloud_and_trend.png")
 
-TOTAL_PAGES = 3
+TOTAL_PAGES = 4
 pages = []
 
 # ============================================================== PAGE 1
 pages.append(f"""
 <div class="page">
 {topband(
-    "Brain health as a labour-market input: an emergence signal check",
-    "Google Trends and OpenAlex publication data, single collection round, 21&ndash;22 July 2026",
+    "The case for further exploring the link between women's brain health and the economy",
+    "Evidence from informal and academic datasets, 21&ndash;22 July 2026",
+    doclabel="POC draft research proposal",
+)}
+<div class="body-pad">
+{pagehead("Evidence")}
+
+<p class="byline"><strong>Eli Ifaturoti</strong> &nbsp;&middot;&nbsp; eli.ifaturoti@oecd.org</p>
+
+<p>Interest in women's brain health and its correlation with labour have soared since 2021: across eight related topics, public search interest rose by an average of 115% and academic publishing on the same topics grew by an average of 65%, comparing a recent snapshot against the prior period.</p>
+
+<p>A Google Trends keyword combination search revealed particularly sharp growth for specific terms: "postpartum memory" search interest is up 251.5%, "sleep deprivation cognition" up 235.7%, "post covid cognitive" up 213.7%, and "perimenopause memory" up 191.0%, each comparing the recent 3-month mean against the prior 12-month mean.</p>
+
+<p>The graphic below shows the evolution in interest and users' search, alongside academic publishing volume for the same topics.</p>
+
+<figure>
+<figcaption class="figtitle">Figure 1&nbsp; Most frequent terms in the academic corpus, and publication growth for the four fastest-growing topics</figcaption>
+<img src="{FIG2}" style="max-width:100%;">
+<div class="src">Source: own analysis, OpenAlex works corpus (word cloud) and OpenAlex Works API by year (trend lines), 21&ndash;22 July 2026. 2026 figures are partial-year.</div>
+</figure>
+
+<p>An OpenAlex query also revealed a matching rise in academic output: publications on Long Covid cognitive effects grew from 18 in 2021 to a peak of 236 in 2024; work on neurodiversity in adults rose every year, from 13 in 2021 to 62 already in the partial 2026 count; and perimenopause-and-memory publications more than tripled, from 7 in 2021 to 25 so far in 2026.</p>
+
+</div>
+{pagefoot(1, TOTAL_PAGES, "POC draft research proposal")}
+</div>
+""")
+
+# ============================================================== PAGE 2
+pages.append(f"""
+<div class="page">
+{topband(
+    "Premise: why this proposal, and what it tests",
+    "Continued",
     doclabel="POC draft research proposal",
 )}
 <div class="body-pad">
 {pagehead("Premise")}
-
-<p class="byline"><strong>Eli Ifaturoti</strong> &nbsp;&middot;&nbsp; eli.ifaturoti@oecd.org</p>
 
 <div class="pullquote"><span class="label">Policy question</span><span class="q">Does discourse from public and unconventional datasets amplify academic evidence of female brain health being economically material?</span></div>
 
@@ -58,7 +89,7 @@ pages.append(f"""
   <div class="main">
     <p>OECD has already made the case that women's brain health is economically material: its New Approaches for Economic Challenges unit has run Brain Capital, a programme treating brain health as a core economic asset, since 2021, including work on sex and gender differences in neurological outcomes<sup>1</sup>. What is not yet tested is whether public, unconventional data, search interest, publishing activity, amplifies that case: gives it earlier, cheaper, independently observable evidence than the institutional argument alone provides.</p>
     <p>The labour-market cost that argument points to is already measured: menopausal symptoms are linked to higher sick leave and lower work productivity<sup>2</sup>, adult ADHD to comparably large productivity loss<sup>3</sup>, and Long Covid to higher odds of leaving employment the longer symptoms persist<sup>4</sup>. If unconventional public data tracks the same conditions, it gives policymakers a faster, cheaper signal on top of the institutional case, not a competing one.</p>
-    <p>This proposal tests a narrower, answerable version of that question: for eight topics spanning the female lifespan, perimenopause and memory, adult ADHD in women, long COVID cognitive effects and others, is public search interest and academic publishing growing fast enough to count as that kind of evidence. This page reports that first check, using two free data sources, Google Trends and OpenAlex. It does not yet run the medical-recognition check itself, against MeSH, the step that would show whether a topic already has a formal classification.</p>
+    <p>This proposal tests a narrower, answerable version of that question: for eight topics spanning the female lifespan, perimenopause and memory, adult ADHD in women, long COVID cognitive effects and others, is public search interest and academic publishing growing fast enough to count as that kind of evidence. The previous page reported that first check, using two free data sources, Google Trends and OpenAlex. It does not yet run the medical-recognition check itself, against MeSH, the step that would show whether a topic already has a formal classification.</p>
     <p>Working hypothesis: these eight topics are gaining public and research attention faster than they are gaining formal medical recognition. The eight were chosen because each names a phase of the female lifespan or a related cognitive condition already raised in OECD's Brain Capital seminars, not because they scored highest in a broader keyword sweep.</p>
   </div>
   <div class="rail">
@@ -73,22 +104,22 @@ pages.append(f"""
       <ul>
         <li>No comparison against existing medical terminology yet.</li>
         <li>No combined priority score, only the emergence half.</li>
-        <li>No trend line, one collection round only.</li>
+        <li>No trend line beyond the years shown here, one collection round only.</li>
       </ul>
     </div>
   </div>
 </div>
 
 <div class="footnotes">
-<p>(1) Eyre et al. (2021), <em>Neuron</em>. (2) O'Neill, Jones &amp; Reid (2023), <em>Occupational Medicine</em>. (3) Joseph et al. (2019), <em>Journal of Attention Disorders</em>. (4) Ayoubkhani et al. (2024), <em>European Journal of Public Health</em>. Full citations on page 3.</p>
+<p>(1) Eyre et al. (2021), <em>Neuron</em>. (2) O'Neill, Jones &amp; Reid (2023), <em>Occupational Medicine</em>. (3) Joseph et al. (2019), <em>Journal of Attention Disorders</em>. (4) Ayoubkhani et al. (2024), <em>European Journal of Public Health</em>. Full citations on page 4.</p>
 </div>
 
 </div>
-{pagefoot(1, TOTAL_PAGES, "POC draft research proposal")}
+{pagefoot(2, TOTAL_PAGES, "POC draft research proposal")}
 </div>
 """)
 
-# ============================================================== PAGE 2
+# ============================================================== PAGE 3
 pages.append(f"""
 <div class="page">
 {topband(
@@ -116,11 +147,11 @@ pages.append(f"""
 <p>(1) Both growth terms are clipped at zero before multiplying, a rule fixed before this data was collected, so that two co-declining signals cannot produce a false-positive emergence score.</p>
 </div>
 </div>
-{pagefoot(2, TOTAL_PAGES, "POC draft research proposal")}
+{pagefoot(3, TOTAL_PAGES, "POC draft research proposal")}
 </div>
 """)
 
-# ============================================================== PAGE 3
+# ============================================================== PAGE 4
 pages.append(f"""
 <div class="page">
 {topband(
@@ -176,7 +207,7 @@ pages.append(f"""
 <p><strong>Author:</strong> Eli Ifaturoti &nbsp;&middot;&nbsp; <strong>Email:</strong> eli.ifaturoti@oecd.org</p>
 </div>
 </div>
-{pagefoot(3, TOTAL_PAGES, "POC draft research proposal")}
+{pagefoot(4, TOTAL_PAGES, "POC draft research proposal")}
 </div>
 """)
 
