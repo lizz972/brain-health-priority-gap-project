@@ -46,7 +46,7 @@ pages.append(f"""
 <div class="page">
 {topband(
     "The case for further exploring the link between women's brain health and the economy",
-    "Evidence from informal and academic datasets, 21&ndash;22 July 2026",
+    "Evidence from informal and academic datasets, 22 July 2026",
     doclabel="POC draft research proposal",
 )}
 <div class="body-pad">
@@ -63,7 +63,7 @@ pages.append(f"""
 <figure>
 <figcaption class="figtitle">Figure 1&nbsp; Google Trends search interest, recent vs. prior period, by topic</figcaption>
 <img src="{FIG3}" style="max-width:92%;">
-<div class="src">Source: own analysis, Google Trends (pytrends), 21&ndash;22 July 2026.</div>
+<div class="src">Source: own analysis, Google Trends (pytrends), 22 July 2026.</div>
 </figure>
 
 </div>
@@ -87,7 +87,7 @@ pages.append(f"""
 <figure>
 <figcaption class="figtitle">Figure 2&nbsp; Most frequent terms in the OpenAlex corpus, and publication growth for the four fastest-growing topics</figcaption>
 <img src="{FIG2}" style="max-width:100%;">
-<div class="src">Source: own analysis, OpenAlex works corpus (word cloud) and OpenAlex Works API by year (trend lines), 21&ndash;22 July 2026. 2026 figures are partial-year.</div>
+<div class="src">Source: own analysis, OpenAlex works corpus (word cloud) and OpenAlex Works API by year (trend lines), 22 July 2026. 2026 figures are partial-year.</div>
 </figure>
 
 </div>
@@ -120,7 +120,7 @@ pages.append(f"""
     <div class="stat"><div class="n">4</div><div class="l">Topics scoring above 8,000</div></div>
     <div class="railbox">
       <div class="boxtitle">Objective, this round</div>
-      <p style="margin:0;">Confirm, from this single 21&ndash;22 July 2026 data pull, whether at least half of the eight topics show positive growth on both signals, enough to justify running the MeSH comparison next round.</p>
+      <p style="margin:0;">Confirm, from this single 22 July 2026 data pull, whether at least half of the eight topics show positive growth on both signals, enough to justify running the MeSH comparison next round.</p>
     </div>
     <div class="railbox">
       <div class="boxtitle">Limitations</div>
@@ -163,7 +163,7 @@ pages.append(f"""
 <figure>
 <figcaption class="figtitle">Figure 1&nbsp; Emergence score by candidate topic</figcaption>
 <img src="{FIG1}" style="max-width:88%;">
-<div class="src">Source: own analysis, Google Trends (pytrends) / OpenAlex Works API, 21&ndash;22 July 2026.</div>
+<div class="src">Source: own analysis, Google Trends (pytrends) / OpenAlex Works API, 22 July 2026.</div>
 </figure>
 
 <div class="footnotes">
@@ -221,11 +221,11 @@ pages.append(f"""
 <p>Joseph et al. (2019). Health-related quality of life and work productivity of adults with ADHD. <em>Journal of Attention Disorders</em>, 23(12).</p>
 <p>Ayoubkhani et al. (2024). Employment outcomes of people with Long Covid symptoms. <em>European Journal of Public Health</em>, 34(3).</p>
 <p><strong>Institutional</strong> &mdash; OECD NAEC Unit, Neuroscience-inspired Policy Initiative, Brain Capital programme.</p>
-<p><strong>Data sources</strong> &mdash; Google Trends (pytrends); OpenAlex Works API, 21&ndash;22 July 2026.</p>
+<p><strong>Data sources</strong> &mdash; Google Trends (pytrends); OpenAlex Works API, 22 July 2026.</p>
 </div>
 
 <div class="citebox">
-<p><strong>BRAIN HEALTH AS AN ECONOMIC INPUT</strong> &nbsp;&middot;&nbsp; POC draft research proposal, 21&ndash;22 July 2026.</p>
+<p><strong>BRAIN HEALTH AS AN ECONOMIC INPUT</strong> &nbsp;&middot;&nbsp; POC draft research proposal, 22 July 2026.</p>
 <div class="rule"></div>
 <p><strong>Author:</strong> Eli Ifaturoti &nbsp;&middot;&nbsp; <strong>Email:</strong> eli.ifaturoti@oecd.org</p>
 </div>
