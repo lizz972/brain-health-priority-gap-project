@@ -36,8 +36,9 @@ def b64(name):
 
 FIG1 = b64("emergence_score_by_topic.png")
 FIG2 = b64("wordcloud_and_trend.png")
+FIG3 = b64("trends_recent_vs_prior.png")
 
-TOTAL_PAGES = 4
+TOTAL_PAGES = 5
 pages = []
 
 # ============================================================== PAGE 1
@@ -57,15 +58,13 @@ pages.append(f"""
 
 <p>A Google Trends keyword combination search revealed particularly sharp growth for specific terms: "postpartum memory" search interest is up 251.5%, "sleep deprivation cognition" up 235.7%, "post covid cognitive" up 213.7%, and "perimenopause memory" up 191.0%, each comparing the recent 3-month mean against the prior 12-month mean.</p>
 
-<p>The graphic below shows the evolution in interest and users' search, alongside academic publishing volume for the same topics.</p>
+<p>The graphic below shows that evolution in interest and users' search, comparing the recent 3-month mean against the prior 12-month mean for each topic.</p>
 
 <figure>
-<figcaption class="figtitle">Figure 1&nbsp; Most frequent terms in the academic corpus, and publication growth for the four fastest-growing topics</figcaption>
-<img src="{FIG2}" style="max-width:100%;">
-<div class="src">Source: own analysis, OpenAlex works corpus (word cloud) and OpenAlex Works API by year (trend lines), 21&ndash;22 July 2026. 2026 figures are partial-year.</div>
+<figcaption class="figtitle">Figure 1&nbsp; Google Trends search interest, recent vs. prior period, by topic</figcaption>
+<img src="{FIG3}" style="max-width:92%;">
+<div class="src">Source: own analysis, Google Trends (pytrends), 21&ndash;22 July 2026.</div>
 </figure>
-
-<p>An OpenAlex query also revealed a matching rise in academic output: publications on Long Covid cognitive effects grew from 18 in 2021 to a peak of 236 in 2024; work on neurodiversity in adults rose every year, from 13 in 2021 to 62 already in the partial 2026 count; and perimenopause-and-memory publications more than tripled, from 7 in 2021 to 25 so far in 2026.</p>
 
 </div>
 {pagefoot(1, TOTAL_PAGES, "POC draft research proposal")}
@@ -73,6 +72,30 @@ pages.append(f"""
 """)
 
 # ============================================================== PAGE 2
+pages.append(f"""
+<div class="page">
+{topband(
+    "Academic publishing evidence: the OpenAlex query",
+    "Continued",
+    doclabel="POC draft research proposal",
+)}
+<div class="body-pad">
+{pagehead("Evidence")}
+
+<p>An OpenAlex query also revealed a matching rise in academic output: publications on Long Covid cognitive effects grew from 18 in 2021 to a peak of 236 in 2024; work on neurodiversity in adults rose every year, from 13 in 2021 to 62 already in the partial 2026 count; and perimenopause-and-memory publications more than tripled, from 7 in 2021 to 25 so far in 2026. The word cloud and publication trend below are drawn from that same OpenAlex corpus.</p>
+
+<figure>
+<figcaption class="figtitle">Figure 2&nbsp; Most frequent terms in the OpenAlex corpus, and publication growth for the four fastest-growing topics</figcaption>
+<img src="{FIG2}" style="max-width:100%;">
+<div class="src">Source: own analysis, OpenAlex works corpus (word cloud) and OpenAlex Works API by year (trend lines), 21&ndash;22 July 2026. 2026 figures are partial-year.</div>
+</figure>
+
+</div>
+{pagefoot(2, TOTAL_PAGES, "POC draft research proposal")}
+</div>
+""")
+
+# ============================================================== PAGE 3
 pages.append(f"""
 <div class="page">
 {topband(
@@ -111,15 +134,15 @@ pages.append(f"""
 </div>
 
 <div class="footnotes">
-<p>(1) Eyre et al. (2021), <em>Neuron</em>. (2) O'Neill, Jones &amp; Reid (2023), <em>Occupational Medicine</em>. (3) Joseph et al. (2019), <em>Journal of Attention Disorders</em>. (4) Ayoubkhani et al. (2024), <em>European Journal of Public Health</em>. Full citations on page 4.</p>
+<p>(1) Eyre et al. (2021), <em>Neuron</em>. (2) O'Neill, Jones &amp; Reid (2023), <em>Occupational Medicine</em>. (3) Joseph et al. (2019), <em>Journal of Attention Disorders</em>. (4) Ayoubkhani et al. (2024), <em>European Journal of Public Health</em>. Full citations on page 5.</p>
 </div>
 
 </div>
-{pagefoot(2, TOTAL_PAGES, "POC draft research proposal")}
+{pagefoot(3, TOTAL_PAGES, "POC draft research proposal")}
 </div>
 """)
 
-# ============================================================== PAGE 3
+# ============================================================== PAGE 4
 pages.append(f"""
 <div class="page">
 {topband(
@@ -147,11 +170,11 @@ pages.append(f"""
 <p>(1) Both growth terms are clipped at zero before multiplying, a rule fixed before this data was collected, so that two co-declining signals cannot produce a false-positive emergence score.</p>
 </div>
 </div>
-{pagefoot(3, TOTAL_PAGES, "POC draft research proposal")}
+{pagefoot(4, TOTAL_PAGES, "POC draft research proposal")}
 </div>
 """)
 
-# ============================================================== PAGE 4
+# ============================================================== PAGE 5
 pages.append(f"""
 <div class="page">
 {topband(
@@ -207,7 +230,7 @@ pages.append(f"""
 <p><strong>Author:</strong> Eli Ifaturoti &nbsp;&middot;&nbsp; <strong>Email:</strong> eli.ifaturoti@oecd.org</p>
 </div>
 </div>
-{pagefoot(4, TOTAL_PAGES, "POC draft research proposal")}
+{pagefoot(5, TOTAL_PAGES, "POC draft research proposal")}
 </div>
 """)
 
