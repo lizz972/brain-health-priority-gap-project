@@ -18,13 +18,13 @@ body{font-family:Arial,Helvetica,"Segoe UI",sans-serif;color:var(--text);
      font-size:13.5px;line-height:1.5;}
 @page{size:A4;margin:0;}
 .page{
-  width:210mm;min-height:297mm;background:#fff;margin:6mm auto;
+  width:210mm;height:297mm;background:#fff;margin:6mm auto;
   position:relative;
   box-shadow:0 0 6px rgba(0,0,0,.25);
 }
 @media print{
   body{background:#fff;}
-  .page{margin:0;box-shadow:none;page-break-after:always;}
+  .page{margin:0;box-shadow:none;page-break-after:always;height:297mm;}
 }
 
 /* full-width colour band header, replacing POC1's slim logo-left masthead */
@@ -45,7 +45,7 @@ body{font-family:Arial,Helvetica,"Segoe UI",sans-serif;color:var(--text);
 .topband .subtitle{font-size:13.5px;font-style:italic;color:#DCEAE7;
   border-top:1px solid rgba(255,255,255,.35);padding-top:7px;max-width:88%;}
 
-.body-pad{padding:6mm 14mm 15mm 14mm;}
+.body-pad{padding:6mm 14mm 11mm 14mm;}
 
 .byline{font-size:11px;color:var(--grey);margin:0 0 10px 0;}
 .byline strong{color:var(--deep);}
@@ -55,17 +55,17 @@ body{font-family:Arial,Helvetica,"Segoe UI",sans-serif;color:var(--text);
 
 .pagehead{display:flex;justify-content:space-between;align-items:center;
   font-size:10px;color:var(--sage);text-transform:uppercase;letter-spacing:.4px;
-  margin-bottom:11px;font-weight:700;}
+  margin-bottom:8px;font-weight:700;}
 
-h2.sec{color:var(--deep);font-size:16px;text-transform:uppercase;
-  letter-spacing:.2px;margin:0 0 10px 0;position:relative;padding-left:12px;}
+h2.sec{color:var(--deep);font-size:15px;text-transform:uppercase;
+  letter-spacing:.2px;margin:0 0 7px 0;position:relative;padding-left:12px;}
 h2.sec::before{content:"";position:absolute;left:0;top:1px;bottom:1px;width:4px;background:var(--sage);}
-h3.sub{color:var(--sage);font-size:14px;margin:11px 0 5px 0;font-weight:700;}
+h3.sub{color:var(--sage);font-size:14px;margin:8px 0 4px 0;font-weight:700;}
 
 /* sidebar layout: main narrative column + a narrower right rail,
    replacing POC1's full-width two-column justified flow */
-.layout{display:grid;grid-template-columns:1fr 0.4fr;gap:9mm;align-items:start;}
-.main p{margin:0 0 7px 0;text-align:left;}
+.layout{display:grid;grid-template-columns:1fr 0.4fr;gap:8mm;align-items:start;}
+.main p{margin:0 0 5px 0;text-align:left;}
 .rail{border-left:1px solid var(--rule);padding-left:8mm;}
 
 .pullquote{border-top:2px solid var(--sage);border-bottom:2px solid var(--sage);
@@ -110,13 +110,13 @@ sup{color:var(--sage);font-weight:700;}
   text-transform:uppercase;letter-spacing:.3px;font-weight:700;}
 
 .citebox{border-top:2px solid var(--deep);border-bottom:2px solid var(--deep);
-  padding:10px 0;margin-top:10px;font-size:12px;}
+  padding:7px 0;margin-top:6px;font-size:12px;}
 .citebox p{margin:0 0 4px 0;}
 .citebox .rule{border-top:1px solid var(--rule);margin:6px 0;}
 .contactbrand{display:flex;align-items:center;gap:9px;margin-bottom:6px;}
 
-.reftwo{column-count:2;column-gap:7mm;font-size:11px;}
-.reftwo p{margin:0 0 6px 0;}
+.reftwo{column-count:2;column-gap:7mm;font-size:10px;}
+.reftwo p{margin:0 0 4px 0;line-height:1.35;}
 </style>
 </head>
 <body>
@@ -135,7 +135,7 @@ sup{color:var(--sage);font-weight:700;}
     </div>
     
 <div class="body-pad">
-<div class="pagehead"><span>Brain Health as an Economic Input — Technical Briefing</span><span>Layout check</span></div>
+<div class="pagehead"><span>Brain Health as an Economic Input</span><span>Layout check</span></div>
 <div class="disclaimer"><strong>This is a proposal, not an adopted identity or a briefing note.</strong> It uses a sidebar layout &mdash; a single main column plus a narrower right-hand rail &mdash; deliberately different from POC1's full-width two-column arrangement, in a distinct muted slate-teal palette, and a project name that does not reuse POC1's "radar" branding. Nothing on this page reflects a real finding.</div>
 
 <h2 class="sec">Placeholder section heading</h2>

@@ -177,7 +177,7 @@ def topband(doctitle, subtitle, doclabel="Proposal"):
     """
 
 
-def pagehead(section, doc_title="Brain Health as an Economic Input — Technical Briefing"):
+def pagehead(section, doc_title="Brain Health as an Economic Input"):
     return f'<div class="pagehead"><span>{doc_title}</span><span>{section}</span></div>'
 
 
